@@ -2,6 +2,14 @@ This is the third module.
 <br>
 it will returns a vector of asymmetric friendship pairs.
 <br>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <utility> // for std::pair
+#include <unordered_map>
+#include <set>
+using namespace std;
+
 vector<pair<int, int>> Findasymmetricpairs(const vector<pair<int, int>>& friends) {
     set<pair<int, int>> pairsset(friends.begin(), friends.end());
     vector<pair<int, int>> asymmetricpairs;
