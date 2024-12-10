@@ -1,0 +1,16 @@
+This is the third module.
+<br>
+it will returns a vector of asymmetric friendship pairs.
+<br>
+vector<pair<int, int>> Findasymmetricpairs(const vector<pair<int, int>>& friends) {
+    set<pair<int, int>> pairsset(friends.begin(), friends.end());
+    vector<pair<int, int>> asymmetricpairs;
+
+    for (const auto& [a, b] : friends) {
+        if (pairsset.find({b, a}) == pairsset.end()) {
+            asymmetricpairs.emplace_back(a, b);
+        }
+    }
+
+    return asymmetricpairs;
+}
