@@ -1,0 +1,23 @@
+This is my second module of the project.
+<br>
+it will return a set of student names with the highest number of friends.
+<br>
+set<int> Findmostpopular(const vector<pair<int, int>>& friends) {
+    unordered_map<int, int> friendCount;
+    for (const auto& p : friends) {
+        friendCount[p.first]++;
+    }
+
+    int maxFriends = 0;
+    for (const auto& [student, count] : friendCount) {
+        maxFriends = max(maxFriends, count);
+    }
+
+    set<int> mostpopular;
+    for (const auto& [student, count] : friendCount) {
+        if (count == maxFriends) {
+            mostpopular.insert(student);
+        }
+    }
+    return mostpopular;
+}
