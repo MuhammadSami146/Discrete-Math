@@ -2,6 +2,14 @@ This is my second module of the project.
 <br>
 it will return a set of student names with the highest number of friends.
 <br>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <utility> // for std::pair
+#include <unordered_map>
+#include <set>
+using namespace std;
+
 set<int> Findmostpopular(const vector<pair<int, int>>& friends) {
     unordered_map<int, int> friendCount;
     for (const auto& p : friends) {
