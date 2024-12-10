@@ -1,5 +1,6 @@
 # Discrete-math
 This repository is for my project of discrete structure.
+<br>
 The project is based on graph theory to explore the student network and find the patterns in the graph. The 
 project code should be in C++. Modularity is at the center of the project. All modules should be defined 
 with clear parameter, outcome, and member assignment details.
