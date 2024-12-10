@@ -1,0 +1,18 @@
+This is my First module of the project.
+<br>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <utility> // for std::pair
+#include <unordered_map>
+#include <set>
+
+using namespace std;
+
+void LoadData(const string& filename, vector<pair<int, int>>& friends) {
+    ifstream file(filename);
+    int student1, student2;
+    while (file >> student1 >> student2) {
+        friends.emplace_back(student1, student2);
+    }
+}
